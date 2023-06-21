@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription</title>
+    <style>
+        /* CSS styles for the prescription */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .patient-info {
+            margin-bottom: 20px;
+        }
+        .medication-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .medication-table th, .medication-table td {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Issuing Clinic</h1>
+        <p>Address, City, State, Zip</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
+    
+    <div class="patient-info">
+        <h2>Patient Information</h2>
+        <p><strong>Name:</strong> {{ patient_name }}</p>
+        <p><strong>Date of Birth:</strong> {{ date_of_birth }}</p>
+        <p><strong>Address:</strong> {{ address }}</p>
+    </div>
+    
+    <table class="medication-table">
+        <thead>
+            <tr>
+                <th>Medication</th>
+                <th>Dosage</th>
+                <th>Instructions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for medication in medications %}
+            <tr>
+                <td>{{ medication.name }}</td>
+                <td>{{ medication.dosage }}</td>
+                <td>{{ medication.instructions }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="footer">
+        <p><strong>Physician:</strong> {{ physician_name }}</p>
+        <p><strong>Email:</strong> {{ physician_email }}</p>
+        <p><img src="{{ physician_signature }}" alt="Physician Signature"></p>
+    </div>
+</body>
+</html>
