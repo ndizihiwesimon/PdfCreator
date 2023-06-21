@@ -32,13 +32,14 @@
 </head>
 <body>
     <div class="header">
-        <h1>Issuing Clinic</h1>
+        <p><img src="https://hellomed.rw/assets/images/logo-icon.png" alt="Hellomed Logo" width="80"></p>
+        <h3>Hellomed Rwanda</h3>
         <p>Address, City, State, Zip</p>
         <p>Phone: (123) 456-7890</p>
     </div>
     
     <div class="patient-info">
-        <h2>Patient Information</h2>
+        <h4>Patient Information</h4>
         <p><strong>Name:</strong> {{ patient_name }}</p>
         <p><strong>Date of Birth:</strong> {{ date_of_birth }}</p>
         <p><strong>Address:</strong> {{ address }}</p>
@@ -66,7 +67,7 @@
     <div class="footer">
         <p><strong>Physician:</strong> {{ physician_name }}</p>
         <p><strong>Email:</strong> {{ physician_email }}</p>
-        <p><img src="{{ physician_signature }}" alt="Physician Signature"></p>
+        <p><img src="{{ physician_signature }}" alt="Physician Signature" width="100" ></p>
     </div>
 </body>
 </html>
