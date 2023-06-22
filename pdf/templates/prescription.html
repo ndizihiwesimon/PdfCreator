@@ -41,6 +41,7 @@
     <div class="patient-info">
         <h4>Patient Information</h4>
         <p><strong>Name:</strong> {{ patient_name }}</p>
+        <p><strong>Gender:</strong> {{ patient_gender }}</p>
         <p><strong>Date of Birth:</strong> {{ date_of_birth }}</p>
         <p><strong>Address:</strong> {{ address }}</p>
     </div>
@@ -68,6 +69,7 @@
         <p><strong>Physician:</strong> {{ physician_name }}</p>
         <p><strong>Email:</strong> {{ physician_email }}</p>
         <p><img src="{{ physician_signature }}" alt="Physician Signature" width="100" ></p>
+        <p><img src="{{ stamp_image }}" alt="Stamp" class="stamp" width="120"></p>
     </div>
 </body>
 </html>

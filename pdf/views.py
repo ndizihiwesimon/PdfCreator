@@ -8,6 +8,7 @@ def generate_prescription_pdf(request):
    # Render the HTML template with the data
    context = {
        'patient_name': 'John Doe',
+       'patient_gender': 'Female',
        'date_of_birth': '01/01/1990',
        'address': '123 Street, City',
        'medications': [
@@ -16,7 +17,8 @@ def generate_prescription_pdf(request):
        ],
        'physician_name': 'Dr. Jane Smith',
        'physician_email': 'jane.smith@example.com',
-       'physician_signature': 'https://www.freepnglogos.com/uploads/signature-png/antonin-scalia-signature-png-picture-download-22.png'
+       'physician_signature': 'https://www.freepnglogos.com/uploads/signature-png/antonin-scalia-signature-png-picture-download-22.png',
+       'stamp_image': 'https://www.freeiconspng.com/uploads/free-stamp-png-10.jpg'
    }
    html_template = 'prescription.html'
    rendered_html = render_to_string(html_template, context)
